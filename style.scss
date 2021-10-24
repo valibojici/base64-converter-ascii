@@ -1,14 +1,18 @@
 *{
     box-sizing: border-box;
+	padding : 0;
+	margin: 0;
 }
 
 body{
+	background-color: rgba(30, 58, 138, 1);
     height: 100vh;
     display: flex;
     justify-content: center;
 }
 
 textarea{
+	border: none;
     $textbox_width: 60vw;
 
     font-family: 'Cousine', monospace;
@@ -58,6 +62,7 @@ table{
 @media screen and (max-width: 900px) {
     textarea{
         font-size: 1rem;
+	width: 80vw;
     }
 
     .text-container{

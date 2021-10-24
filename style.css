@@ -1,14 +1,14 @@
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 body {
+  background-color: #1e3a8a;
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: rgba(30, 58, 138, 1);
 }
 
 textarea {
@@ -50,6 +50,7 @@ table {
 @media screen and (max-width: 900px) {
   textarea {
     font-size: 1rem;
+    width: 80vw;
   }
 
   .text-container {
