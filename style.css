@@ -1,14 +1,18 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   height: 100vh;
   display: flex;
   justify-content: center;
+  background-color: rgba(30, 58, 138, 1);
 }
 
 textarea {
+  border: none;
   font-family: "Cousine", monospace;
   display: block;
   width: 60vw;
