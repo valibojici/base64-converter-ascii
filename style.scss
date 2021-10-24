@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+textarea{
+    $textbox_width: 60vw;
+
+    font-family: 'Cousine', monospace;
+
+    display: block;
+    width: $textbox_width;
+    height: auto;
+    margin: 2vh 0;
+
+    font-size: 2rem;
+    padding: 0 5px;
+    line-height: normal;
+
+    resize: none;
+
+    color: black;
+    background-color: rgba(162, 181, 250, 0.87);
+    // overflow: hidden;
+
+    max-height: 40%;
+
+    scrollbar-width: thin;
+}
+
+table{
+    color: white;
+}
+
+.text-container{
+    padding: 25px 0;
+    width: 100%;
+    display: block;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    label{
+        font-size: 1.5rem;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    textarea{
+        font-size: 1rem;
+    }
+
+    .text-container{
+        padding: 5px 0;
+        
+        label{
+            font-size: 1rem;
+        }
+    }
+}
