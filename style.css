@@ -2,10 +2,13 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
+  font-family: sans-serif;
 }
 
 body {
   background-color: #1e3a8a;
+  min-height: 100vh;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -45,6 +48,71 @@ table {
   font-size: 1.5rem;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#details-btn{
+  padding: 1em;
+  font-size: 1rem;
+  color: white;
+
+  background-color: rgba(255,255,255, 0.1);
+  border: none;
+  margin: 0.5em;
+
+  border-radius: 5px;
+}
+
+#details-btn:hover{
+  cursor: pointer;
+}
+
+.details-container{
+  width: 60%;
+  margin: 1em auto;
+
+  font-size: 1.2rem;
+  color: white;
+}
+
+.details-container > *{
+  margin-top: 1em;
+}
+
+.bits-container > *{
+  word-break: all;
+  word-break: break-all;
+}
+
+.explanation{
+  margin-bottom: 1em;
+}
+
+.gap{
+  gap: 1em;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.text-red{
+  color: red;
+}
+
+.hide{
+  display: none !important; 
 }
 
 @media screen and (max-width: 900px) {

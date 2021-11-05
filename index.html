@@ -16,6 +16,21 @@
 	<div class="text-container">
 		<label for="decode">Decoded text</label>
 		<textarea id="decode"></textarea>
+		<div>
+			<button class="button" id="details-btn">Arata detalii</button>
+		</div>
+		<div class="details-container flex flex-column hide">
+			<div class="details-ascii-codes flex flex-wrap gap"></div>
+			<hr>
+			<div class="details-bits">
+				<div class="explanation"></div>
+				<div class="bits-container flex flex-wrap">
+					
+				</div>
+			</div>
+			<hr>
+			<div class="details-base64-codes flex flex-wrap gap"></div>
+		</div>
 		<label for="decode">Encoded text <span id='encode-error' style="color:red; display:none">incorrect format</span></label>
 		<textarea id="encode"></textarea>
 	</div>
