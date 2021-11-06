@@ -22,7 +22,7 @@ decodeText.addEventListener('input', e=>{
 
 encodeText.addEventListener('input', e=>{
     let check = checkInput(e.target.value);
-    console.log(check);
+ 
     if(check){
         document.getElementById('encode-error').style.display = 'none';
         decodeText.value = base64ToText(e.target.value);
@@ -33,6 +33,10 @@ encodeText.addEventListener('input', e=>{
     }
     auto_grow(encodeText);
     auto_grow(decodeText);
+
+    if(!document.getElementsByClassName('details-container')[0].classList.contains('hide')){
+        adddetails(decodeText.value, encodeText.value);
+    }
 });
 
 
@@ -70,6 +74,9 @@ function textToBase64(string){
 
 function base64ToText(string){
     result = [];
+    if(string[string.length - 1] == '=')string = string.slice(0,-1);
+    if(string[string.length - 1] == '=')string = string.slice(0,-1);
+    
     for(let i=0; i<string.length; i+=4){
         let word = string.slice(i, i+4);
         word = word.split('').map(c => getBase64CodeBits(c)).join('');
