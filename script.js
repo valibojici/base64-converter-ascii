@@ -168,11 +168,11 @@ function adddetails(str, encoded_str){
     let padding_bit_count = total_bit_count % 24 == 0 ? 0 : 24 - total_bit_count % 24;
 
     explanation.textContent = `
-      Input-ul are ${total_bit_count} biti, ${total_bit_count} % 24 = ${total_bit_count % 24}`;
+      Input has ${total_bit_count} bits, ${total_bit_count} % 24 = ${total_bit_count % 24}`;
     if(padding_bit_count == 0){
-        explanation.textContent += `, inseamna ca nu avem padding.`;
+        explanation.textContent += `, so we don't need padding.`;
     } else {
-        explanation.textContent += `. Rezulta 24 - ${total_bit_count % 24} = ${padding_bit_count} biti de 0 de padding.`;
+        explanation.textContent += `. That means 24 - ${total_bit_count % 24} = ${padding_bit_count} bits of padding.`;
     }
 
     for(c of str){
@@ -193,14 +193,13 @@ function adddetails(str, encoded_str){
 
 
     for(let c of encoded_str){
-
         let cell = document.createElement('div');
         let letter = document.createElement('div');
         let base64Code = document.createElement('div');
         let binary = document.createElement('div');
 
         binary.textContent = getBase64CodeBits(c);
-        base64Code.textContent = parseInt(binary.textContent, 2);
+        base64Code.textContent = c != '=' ? parseInt(binary.textContent, 2) : 'padding';
         letter.textContent = c;
 
         cell.appendChild(binary);

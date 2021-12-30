@@ -18,7 +18,7 @@ textarea {
   border: none;
   font-family: "Cousine", monospace;
   display: block;
-  width: 60vw;
+  width: 80%;
   height: auto;
   margin: 2vh 0;
   font-size: 2rem;
@@ -51,7 +51,7 @@ table {
 }
 
 #details-btn{
-  padding: 1em;
+  padding: 0.5em 1em;
   font-size: 1rem;
   color: white;
 
@@ -67,10 +67,12 @@ table {
 }
 
 .details-container{
-  width: 60%;
+  width: 100%;
   margin: 1em auto;
+  padding: 0em 1em;
 
-  font-size: 1.1rem;
+  font-size: 0.9rem;
+  line-height: 100%;
   color: white;
 }
 
@@ -115,6 +117,26 @@ table {
   display: none !important; 
 }
 
+.position-absolute{
+  position: absolute;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+
+.justify-content-evenly{
+  justify-content: space-evenly;
+}
+
+.table-headers{
+  border-right: 2px solid white;
+  margin-right: 1em;
+  padding-right: 1em;
+  width: 15%;
+  flex-shrink: 0;
+}
+
 @media screen and (max-width: 900px) {
   textarea {
     font-size: 1rem;
@@ -133,11 +155,25 @@ table {
   }
 
   .details-container{
-    width: 90vw;
-    margin: 0.5em auto;
+    width: 100%;
     font-size: 0.9rem;
     color: white;
   }
+
+  .gap{
+    gap : 0.5em;
+  }
+
+  .table-headers{
+    border-right: 2px solid white;
+    margin-right: 1em;
+    padding-right: 1em;
+    width: 15%;
+    flex-shrink: 0;
+    font-size: 0.6rem;
+    padding: 0;
+  }
+
 }
 
 /*# sourceMappingURL=style.css.map */
